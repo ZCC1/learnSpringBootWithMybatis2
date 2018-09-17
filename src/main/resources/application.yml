@@ -1,0 +1,21 @@
+# 默认使用开发配置
+spring:
+  profiles:
+    active: dev
+    
+#配置mybatis参数
+mybatis:
+  type-aliases-package: com.zcz.entity
+  mapper-locations: classpath:mapper/*.xml
+  
+--- 
+  
+#开发配置
+spring:
+  profiles: dev
+
+  datasource: 
+    url: jdbc:mysql://localhost:3306/learnspringbootwithmybatis
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123 
